@@ -4,7 +4,7 @@ function minimum(a, b) {
     } else if (a < b) {
       return a;
     } else {
-      console.log("Numbers are the same");
+      console.log("Same Numbers");
     }
   }
   

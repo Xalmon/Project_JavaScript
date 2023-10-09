@@ -1,4 +1,4 @@
-function isEven(number){
+function isEvenNumber(number){
     if (number === 0){
         return true;
     }
@@ -6,11 +6,11 @@ function isEven(number){
         return false;
     }
     else if ( number < 0){
-        return isEven(-number);
+        return isEvenNumber(-number);
     }
     else{
-        return isEven(number-2);
+        return isEvenNumber(number-2);
     }
 }
-console.log(isEven(100));
-console.log(isEven(30));
+console.log(isEvenNumber(100));
+console.log(isEvenNumber(30));

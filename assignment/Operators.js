@@ -1,4 +1,4 @@
-function operations(left_operand, operator, right_operand) {
+function AritOperations(left_operand, operator, right_operand) {
     let ans;
   
     if (operator === "+") {
@@ -26,10 +26,10 @@ function operations(left_operand, operator, right_operand) {
     return ans;
   }
   
-  console.log(operations(5, "+", 3));
-  console.log(operations(10, "-", 4));
-  console.log(operations(6, "*", 2));
-  console.log(operations(8, "/", 2));
-  console.log(operations(7, "/", 0));
-  console.log(operations(9, "%", 5));
+  console.log(AritOperations(5, "+", 3));
+  console.log(AritOperations(10, "-", 4));
+  console.log(AritOperations(6, "*", 2));
+  console.log(AritOperations(8, "/", 2));
+  console.log(AritOperations(7, "/", 0));
+  console.log(AritOperations(9, "%", 5));
   
