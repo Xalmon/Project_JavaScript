@@ -8,5 +8,5 @@ function minimum(a, b) {
     }
   }
   
-  console.log(minimum(-1, 10));
+  console.log(minimum(-100, -1));
   

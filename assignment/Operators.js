@@ -11,13 +11,13 @@ function AritOperations(left_operand, operator, right_operand) {
       if (right_operand !== 0) {
         ans = left_operand / right_operand;
       } else {
-        ans = "Division by zero is not allowed";
+        ans = "can't be Divide by zero";
       }
     } else if (operator === "%") {
       if (right_operand !== 0) {
         ans = left_operand % right_operand;
       } else {
-        ans = "Division by zero is not allowed";
+        ans = "can't be Divide by zero";
       }
     } else {
       ans = NaN;

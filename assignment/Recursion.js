@@ -12,5 +12,5 @@ function isEvenNumber(number){
         return isEvenNumber(number-2);
     }
 }
-console.log(isEvenNumber(100));
-console.log(isEvenNumber(30));
+console.log(isEvenNumber(-100));
+console.log(isEvenNumber(1));
