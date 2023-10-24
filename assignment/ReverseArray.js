@@ -20,4 +20,6 @@ function rangeToArray(start, end, step = 1) {
   console.log(rangeToArray(1, 10, 2));       
   console.log(rangeToArray(10, 1, -2));      
   console.log(rangeToArray(-5, 5, 2));       
+  console.log()
+  
   
