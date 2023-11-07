@@ -15,6 +15,10 @@ class LinkedList {
         let newNode = new Node(value);
         newNode.nextElement = this.head;
         this.head = newNode;
+
+        if (this.tail === null) {
+            this.tail = newNode;
+        }
     }
 
     getHead() {
@@ -22,10 +26,16 @@ class LinkedList {
             return this.head.value;
         }
     }
-    getLast () {
-        if(element === null){
+
+    getLast() {
+        if (this.tail !== null) {
             return this.tail.value;
         }
+    }
+
+    clear() {
+        this.head = null;
+        this.tail = null;
     }
 
     deleteAtHead() {
@@ -33,35 +43,64 @@ class LinkedList {
             this.head = this.head.nextElement;
         }
     }
+    
+    removeDuplicate() {
+        let current = this.head;
+    
+        while (current !== null) {
+            let value = current.value;
+            let counter = current;
+    
+            while (counter.nextElement !== null) {
+                if (counter.nextElement.value === value) {
+                    counter.nextElement = counter.nextElement.nextElement;
+                } else {
+                    counter = counter.nextElement;
+                }
+            }
+    
+            current = current.nextElement;
+        }
+    };
+    
+
+    size() {
+        let count = 0;
+        let value = this.head;
+        while (value) {
+            count++;
+            value = value.nextElement;
+        }
+        return count;
+    };
 
     insertAtEnd(value) {
         let newNode = new Node(value);
         if (this.head === null) {
             this.head = newNode;
+            this.tail = newNode;
             return;
         }
 
-        let current = this.head;
-        while (current.nextElement !== null) {
-            current = current.nextElement;
-        }
+        this.tail.nextElement = newNode;
+        this.tail = newNode;
+    };
 
-        current.nextElement = newNode;
-    }
+
+    isEmpty = function () {
+        return this.head === null;
+    };
+
+    printElements = function () {
+        let element = this.head;
+
+        while (element !== null) {
+            process.stdout.write(`${element.value} -> `);
+            element = element.nextElement;
+        }
+        process.stdout.write('null\n');
+    };
 }
 
-LinkedList.prototype.isEmpty = function () {
-    return this.head === null;
-};
-
-LinkedList.prototype.printElements = function () {
-    let element = this.head;
-
-    while (element !== null) {
-        process.stdout.write(`${element.value} -> `);
-        element = element.nextElement;
-    }
-    process.stdout.write('null\n');
-};
-
 module.exports = LinkedList;
+

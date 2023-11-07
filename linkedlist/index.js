@@ -1,18 +1,37 @@
 const LinkedList = require("./linkedlist");
 
 let list = new LinkedList();
-list.insertAtHead(9)
-list.deleteAtHead()
-list.insertAtHead(5)
-list.insertAtHead(2)
+// list.insertAtHead(2)
+// list.deleteAtHead()
+// list.insertAtHead(2)
+// list.insertAtHead(1)
+
+// list.insertAtHead(1)
+// list.printElements()
+
+// list.insertAtHead(1)
+// list.insertAtEnd(3)
+// list.clear()
+// list.printElements()
+
+// list.insertAtHead(1)
+// list.insertAtEnd(4)
+// list.printElements()
+// list.removeDuplicate()
+// list.printElements()
+// console.log(list.size());
+
+list.insertAtHead(4)
 list.insertAtHead(3)
+list.insertAtHead(3)
+list.insertAtHead(3)
+list.insertAtHead(2)
+list.insertAtHead(2)
+list.insertAtHead(2)
+list.insertAtHead(1)
+list.insertAtHead(1)
 list.printElements()
-
-list.insertAtEnd(7)
-list.insertAtEnd(0)
+list.removeDuplicate()
 list.printElements()
-
-list.insertAtHead(5)
-list.insertAtEnd(19)
-list.printElements()
+console.log(list.size());
 
