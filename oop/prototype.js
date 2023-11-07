@@ -1,9 +1,16 @@
 let vehicle = {
     "seats": 5,
     "wheels": 4,
-    "doors": 2
+    "doors": 2,
 }
 
-console.log(vehicle.__proto__)
-console.log(Object.getPrototypeOf(vehicle))
+let car = {
+    model: "Lambo",
+    color: "Peach Black",
+    seats: 2,
+    year: "2023",
+    __proto__: vehicle
+}
 
+console.log(car.color)
+console.log(car.doors)

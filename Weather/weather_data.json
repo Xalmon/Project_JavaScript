@@ -1,0 +1,22 @@
+{
+    "Lagos": {
+        "temperature": "70°F",
+        "conditions": "Sunny"
+    },
+    "Ogun": {
+        "temperature": "63°F",
+        "conditions": "Cloudy"
+    },
+    "Ondo": {
+        "temperature": "55°F",
+        "conditions": "Rainy"
+    },
+    "Oyo": {
+        "temperature": "30°F",
+        "conditions": "Normal"
+    },
+    "Osun": {
+        "temperature": "75°F",
+        "conditions": "Sunny"
+    }
+}
