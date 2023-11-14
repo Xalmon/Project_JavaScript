@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="weather.css">
+    <style>
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+        body {
+            background-image: url('Tree.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: lightblue; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Welcome to Gallery</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="weather.html">WeatherWise</a></li><li><a href="weather2.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to our HomePage</h2>
+        <p>Get the latest weather updates and forecasts for your city. Stay informed about current weather conditions, temperature, and more.</p>
+    </section>
+    <div id="weatherDisplay" style="display: none;">
+        <p id="temperature"></p>
+        <p id="conditions"></p>
+        <img id="weatherIcon" class="weather-icon" src="" alt="Weather Icon">
+    </div>
+</body>
+</html>

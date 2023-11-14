@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="weather.css">
     <style>
         .weather-icon {
             width: 100px;
             height: 100px;
         }
         body {
-            background-color: lightblue;
+            background-image: url('Weather.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: lightblue; 
+        }
+        section {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #fff; 
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>Weather App</h1>
+    <header>
+        <h1>WeatherWise</h1>
+    </header>
     
-    <label for="cityInput">Enter a city: </label>
+    <nav>
+        <ul>
+            <li><a href="weather2.html">Home</a></li> <li><a href="#about">About</a></li> <li><a href="weather3.html">Gallery</a></li> <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="weather2.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="weather3.html">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <script src="index.js"></script>
+
+    <label for="cityInput">Chose your city: </label>
     <input type="text" id="cityInput">
-    <button onclick="getWeather()">Get Weather</button>
+    <button onclick="getWeather()">Weather Update</button>
     <script>
         const mockWeatherData = {
             "Lagos": {
@@ -87,5 +127,15 @@
             return iconMap[weatherCondition] || "default.png"; 
         }
     </script>
+    <div id="weatherDisplay" style="display: none;">
+        <p id="temperature"></p>
+        <p id="conditions"></p>
+        <img id="weatherIcon" class="weather-icon" src="" alt="Weather Icon">
+    </div>
+    
+    <section>
+        <p>Powered By Baba_Solo... una Papa I done dey build web page</p>
+    </section>
+
 </body>
 </html>

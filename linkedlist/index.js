@@ -21,17 +21,22 @@ let list = new LinkedList();
 // list.printElements()
 // console.log(list.size());
 
-list.insertAtHead(4)
-list.insertAtHead(3)
-list.insertAtHead(3)
-list.insertAtHead(3)
-list.insertAtHead(2)
-list.insertAtHead(2)
-list.insertAtHead(2)
-list.insertAtHead(1)
-list.insertAtHead(1)
-list.printElements()
+// list.insertAtHead(4)
+// list.insertAtHead(3)
+// list.insertAtHead(3)
+// list.insertAtHead(3)
+// list.insertAtHead(2)
+// list.insertAtHead(2)
+// list.insertAtHead(2)
+// list.insertAtHead(1)
+// list.insertAtHead(1)
+// list.printElements()
+// list.removeDuplicate()
+// list.printElements()
+// console.log(list.size());
+
+list1 = 50, 10, 90, 4, 16;
 list.removeDuplicate()
+list.confirmNode(list1);
 list.printElements()
-console.log(list.size());
 

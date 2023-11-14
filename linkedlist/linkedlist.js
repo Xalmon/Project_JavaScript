@@ -43,6 +43,10 @@ class LinkedList {
             this.head = this.head.nextElement;
         }
     }
+
+    contains(){
+        
+    }
     
     removeDuplicate() {
         let current = this.head;
@@ -62,7 +66,22 @@ class LinkedList {
             current = current.nextElement;
         }
     };
-    
+
+        confirmNode() {
+        let current = this.head;
+
+        while (current !== null) {
+            if (current.value === 10) {
+                return true;
+            }
+
+            current = current.nextElement;
+        }
+
+        return false;
+    }
+
+        
 
     size() {
         let count = 0;
@@ -100,6 +119,7 @@ class LinkedList {
         }
         process.stdout.write('null\n');
     };
+    
 }
 
 module.exports = LinkedList;
