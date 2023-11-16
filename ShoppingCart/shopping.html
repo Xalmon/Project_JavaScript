@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping</title>
+  <script src="../ShoppingCart/shopping.js"></script>
+  <link rel="stylesheet" href="shopping.css"/>
+</head>
+<body>
+  <header>
+    <h1>SHOPPING LIST</h1>
+  </header>
+  <div>
+    <nav class="nav">
+      <a href="../ShoppingCart/links/home.html">HOME</a>
+      <a href="../ShoppingCart/links/item.html">ITEMS</a>
+      <a href="../ShoppingCart/links/shipping.html">SHIPPING</a>
+      <a href="../ShoppingCart/links/shipping.html">ABOUT</a>
+      <a href="../ShoppingCart/links/about.html">Contact Us</a>
+    </nav>
+    
+
+    <table>
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th>PRICE</th>
+          <th>QUANTITY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="item">Item:</label><input type="text" id="item"></td>
+          <td><label for="price">Price:</label><input type="number" id="price"></td>
+          <td><label for="quantity">Quantity:</label><input type="number" id="quantity"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="addToCart()">Add</button>
+    <button onclick="removeFromCart()">Remove</button>
+    <button onclick="calculateAmount()">Sum</button>
+  </div>
+  
+  
+    <footer>
+        <p>&copy; 2023 Baba_SOLO Ltd. All rights reserved | Terms of Service | Privacy Policy | Contact Us</p>
+    </footer>
+
+</body>
+</html>

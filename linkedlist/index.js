@@ -35,6 +35,7 @@ let list = new LinkedList();
 // list.printElements()
 // console.log(list.size());
 
+let a = LinkedList();
 list1 = 50, 10, 90, 4, 16;
 list.removeDuplicate()
 list.confirmNode(list1);
