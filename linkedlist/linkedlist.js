@@ -47,6 +47,20 @@ class LinkedList {
     contains(){
         
     }
+
+    everseList(head) {
+        let prev = null;
+        let current = head;
+
+        while (current !== null) {
+            let next = current.nextElement;
+            current.nextElement = prev;
+            prev = current;
+            current = next;
+        }
+
+        return prev;
+    }
     
     removeDuplicate() {
         let current = this.head;
@@ -67,22 +81,63 @@ class LinkedList {
         }
     };
 
-        confirmNode() {
+    confirmNode() {
+    let current = this.head;
+
+    while (current !== null) {
+        if (current.value === 10) {
+            return true;
+        }
+
+        current = current.nextElement;
+    }
+
+    return false;
+};
+
+
+palindrome() {
+    let newList = this.head;
+    let oldList = this.head;
+
+    while (oldList !== null && oldList.nextElement !== null) {
+        newList = newList.nextElement;
+        oldList = oldList.nextElement.nextElement;
+    }
+
+
+    let secondHalf = this.reverseList(newList);
+
+
+    let firstHalf = this.head;
+    while (secondHalf !== null) {
+        if (firstHalf.value !== secondHalf.value) {
+            return false;
+        }
+        firstHalf = firstHalf.nextElement;
+        secondHalf = secondHalf.nextElement;
+    }
+
+    return true;
+}
+
+    getNth(position) {
         let current = this.head;
+        let count = 0;
 
         while (current !== null) {
-            if (current.value === 10) {
-                return true;
+            if (count === position) {
+                return current.value;
             }
 
+            count++;
             current = current.nextElement;
         }
 
-        return false;
+        return null;
     }
 
         
-
     size() {
         let count = 0;
         let value = this.head;
