@@ -48,7 +48,7 @@ class LinkedList {
         
     }
 
-    everseList(head) {
+    reverseList(head) {
         let prev = null;
         let current = head;
 
@@ -94,6 +94,20 @@ class LinkedList {
 
     return false;
 };
+
+reverseVowels() {
+    let prev = null;
+    let current = "a, e, i, o, u";
+
+    while (current !== null) {
+        let next = current.nextElement;
+        current.nextElement = prev;
+        prev = current;
+        current = next;
+    }
+
+    return prev;
+}
 
 
 palindrome() {

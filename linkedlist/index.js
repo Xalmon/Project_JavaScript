@@ -44,6 +44,9 @@ list1.removeDuplicate();
 list1.confirmNode(10);
 list1.printElements();
 
+
+list.reverseVowels();
+
 let list2 = new LinkedList();
 list2.insertAtEnd(42);
 list2.insertAtEnd(25);
